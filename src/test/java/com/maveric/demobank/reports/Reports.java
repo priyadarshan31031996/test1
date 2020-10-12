@@ -3,12 +3,7 @@ package com.maveric.demobank.reports;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.ITestResult;
-
 import com.maveric.demobank.common.SeMethods;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -23,7 +18,7 @@ public class Reports extends SeMethods{
  
 public void beforeTest()
   {
-	  report=new ExtentReports("C:\\Users\\ravipa\\JAVA\\DemoBank\\target\\Reports\\Report.html",true);
+	  report=new ExtentReports("C:\\Users\\admin\\Documents\\Maveric Systems\\Materials\\Selenium\\GroupActivity2\\DemoBank\\target\\Reports\\Report.html",true);
   }
 	public void startReport(String m)
 	{

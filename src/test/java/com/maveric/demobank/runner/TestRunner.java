@@ -11,8 +11,8 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features="src\\test\\java\\com\\maveric\\demobank\\features\\AccountDetails.feature",
-		glue="com.maveric.demobank.stepdef",dryRun=false,
+		features="src\\test\\java\\com\\maveric\\demobank\\features\\login.feature",
+		glue="com.maveric.demobank.stepdef",
 		plugin={"pretty","html:target/cucumber","json:target/cucumber.json"})
 
 public class TestRunner extends SeMethods {

@@ -8,6 +8,7 @@ When  Title of the Loginpage is DemoBank
 Then  user enters AccountNumber and password
 And user is on validation pageThen
 Then  user enters PIN Number
+Then user enters FundTransfer details 
 And Click on SignOut
 And Close browser
 

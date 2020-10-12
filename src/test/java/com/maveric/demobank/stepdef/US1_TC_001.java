@@ -1,8 +1,12 @@
 package com.maveric.demobank.stepdef;
 
 
+import java.io.IOException;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.maveric.demobank.common.SeMethods;
 import com.maveric.demobank.reports.Reports;
@@ -121,12 +125,10 @@ public class US1_TC_001 extends SeMethods {
   
     Validate.click();
    
-  
-  
     
-   // WebElement FunTrans=SeObj.locateElement("xpath", SeMethods.objProp.getProperty("DemoBank_FunTransfer.xpath"));
+   WebElement FunTrans=SeObj.locateElement("xpath", SeMethods.objProp.getProperty("DemoBank_FunTransfer.xpath"));
    
-	/*if(FunTrans.isEnabled())
+	if(FunTrans.isEnabled())
 	 {
 		SeObj.reportStep("landed in Account Statement page","PASS");
 	 }
@@ -134,9 +136,38 @@ public class US1_TC_001 extends SeMethods {
 	 {
 		 SeObj.reportStep("Not landed in Account Statement page","FAIL");
 		 
-	 }*/
+	 }
 		
 	}
+	
+	//FundTransfer
+		@Then("user enters FundTransfer details")
+		public void user_fill_the_form() throws IOException, InterruptedException {
+			driver.findElement(By.xpath("//a[contains(text(),'Fund Transfers')]")).click();
+			driver.findElement(By.xpath("//input[@name='rbname']")).sendKeys("ICIC Bank");
+			driver.findElement(By.xpath("//input[@name='rname']")).sendKeys("RAVIPATI");
+			driver.findElement(By.id("accno")).sendKeys("1122334455");
+			driver.findElement(By.xpath("//input[@name='swift']")).sendKeys("876548976");
+			driver.findElement(By.id("amt")).sendKeys("-5");
+			WebElement fto = driver.findElement(By.xpath("//select[@id='toption']"));
+			fto.click();
+			Select element = new Select(fto);
+			element.selectByVisibleText("Domestic Transfer");
+			driver.findElement(By.xpath(" //input[@id='dot']")).sendKeys("01012020");
+			driver.findElement(By.xpath(" //textarea[@id='desc']")).sendKeys("Transfering -$5");
+			Thread.sleep(1000);
+		report.failReport("Transcation Page","PASS","FundTransfer",driver);
+		driver.findElement(By.xpath("//input[@id='submitButton']")).click();
+		Thread.sleep(1000);
+		String otp = driver.findElement(By.xpath("//h2[contains(text(),'Transaction Authorization Code')]")).getText();
+		report.failReport("OTP","PASS","OTP",driver);
+		driver.findElement(By.id("token")).sendKeys("123456");
+		driver.findElement(By.id("submitButton")).click(); 
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//strong[contains(text(),'International Transaction Successful')]")).getText();
+		report.failReport("Transaction Successful","PASS","Transaction Successful",driver);
+		}
+		
 	  @And("Click on SignOut")
 	  public void signOut() throws Throwable {
 	    WebElement Signout=SeObj.locateElement("xpath", SeMethods.objProp.getProperty("DemoBAnk_btnsignout.xpath"));

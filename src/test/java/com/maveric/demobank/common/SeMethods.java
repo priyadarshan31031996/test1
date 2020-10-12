@@ -1,13 +1,10 @@
 package com.maveric.demobank.common;
 
-import java.io.Console;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +18,6 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import com.maveric.demobank.reports.Reporter;
@@ -68,7 +64,7 @@ public class SeMethods extends Reporter {
 		File SrcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		System.out.println("scr file*************"+SrcFile.getAbsolutePath());
 		//System.out.println("driver>>>>>>>>>>>>>>>>>>>>>>>>"+driver);
-		picture="C:/Users/ravipa/JAVA/DemoBank/src/test/java/"+img;
+		picture="C:\\Users\\admin\\Documents\\Maveric Systems\\Materials\\Selenium\\GroupActivity2\\DemoBank\\src\\test\\java"+img;
 		try{
 		FileUtils.copyFile(SrcFile, new File(picture));
 		}
@@ -84,7 +80,7 @@ public class SeMethods extends Reporter {
 		try {
 
 			if (browser.equalsIgnoreCase("chrome")) {
-				System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+				System.setProperty("webdriver.chrome.driver", "C:\\Users\\admin\\Documents\\Maveric Systems\\Materials\\Selenium\\chromedriver.exe");
 				driver = new ChromeDriver();
 			} else {
 				;
