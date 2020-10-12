@@ -1,0 +1,258 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-10-11T18:18:14.409Z",
+        "line": 10,
+        "name": "verify login details with valid credetials",
+        "description": "",
+        "id": "verify-details-for-demo-bank;verify-login-details-with-valid-credetials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 8166000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is on bank page",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_is_on_bank_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat com.maveric.demobank.common.SeMethods.locateElement(SeMethods.java:111)\r\n\tat com.maveric.demobank.stepdef.US1_TC_001.then4(US1_TC_001.java:60)\r\n\tat com.maveric.demobank.stepdef.US2_TC_002.user_enters_username_and_password(US2_TC_002.java:58)\r\n\tat ✽.user enters \"1234556666\" and \"MavDemo@01\"(file:///C:/Users/admin/Documents/Maveric%20Systems/Materials/Selenium/GroupActivity2/DemoBank/src/test/java/com/maveric/demobank/features/AccountDetails.feature:5)\r\n",
+              "duration": 568000000,
+              "status": "failed"
+            },
+            "line": 5,
+            "name": "user enters \"1234556666\" and \"MavDemo@01\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1234556666",
+                  "offset": 13
+                },
+                {
+                  "val": "MavDemo@01",
+                  "offset": 30
+                }
+              ],
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_enters_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "user click login button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_click_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "user has to enter the \"12345\" and Click on Validate PIN",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_has_to_enter_the_PIN_number_and_Click_on_Validate_PIN(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T18:18:23.526Z",
+        "line": 12,
+        "name": "verify account details",
+        "description": "",
+        "id": "verify-details-for-demo-bank;verify-account-details",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: Cannot locate an element using link text\u003dAccount Details\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ADMIN-PC\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 8\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.2\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: driver.version: RemoteWebDriver\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:220)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.maveric.demobank.stepdef.US2_TC_002.user_click_the_account_details_button(US2_TC_002.java:101)\r\n\tat ✽.user click the account details button(file:///C:/Users/admin/Documents/Maveric%20Systems/Materials/Selenium/GroupActivity2/DemoBank/src/test/java/com/maveric/demobank/features/AccountDetails.feature:13)\r\n",
+              "duration": 12991000000,
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "user click the account details button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_click_the_account_details_button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "account details page is displayed",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.account_details_page_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T18:18:37.096Z",
+        "line": 16,
+        "name": "verify account statement",
+        "description": "",
+        "id": "verify-details-for-demo-bank;verify-account-statement",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d86.0.4240.75)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ADMIN-PC\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 8\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.2\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\admin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9fe96fda3c4ad764ee81dbc2f7a90b97\n*** Element info: {Using\u003dlink text, value\u003dAccount Statement}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:220)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.maveric.demobank.stepdef.US2_TC_002.use_click_the_account_statement_button(US2_TC_002.java:81)\r\n\tat ✽.use click the account statement button(file:///C:/Users/admin/Documents/Maveric%20Systems/Materials/Selenium/GroupActivity2/DemoBank/src/test/java/com/maveric/demobank/features/AccountDetails.feature:17)\r\n",
+              "duration": 175000000,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "use click the account statement button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.use_click_the_account_statement_button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 18,
+            "name": "transaction statement is displayeduser user is on bank page on bank page",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T18:18:37.360Z",
+        "line": 20,
+        "name": "verify the fund tranfers",
+        "description": "",
+        "id": "verify-details-for-demo-bank;verify-the-fund-tranfers",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d86.0.4240.75)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ADMIN-PC\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 8\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.2\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\admin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9fe96fda3c4ad764ee81dbc2f7a90b97\n*** Element info: {Using\u003dxpath, value\u003d//a[contains(text(),\u0027Fund Transfers\u0027)]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.maveric.demobank.stepdef.US2_TC_002.user_click_the_fund_transfer_button(US2_TC_002.java:120)\r\n\tat ✽.user click the fund transfer button(file:///C:/Users/admin/Documents/Maveric%20Systems/Materials/Selenium/GroupActivity2/DemoBank/src/test/java/com/maveric/demobank/features/AccountDetails.feature:21)\r\n",
+              "duration": 21000000,
+              "status": "failed"
+            },
+            "line": 21,
+            "name": "user click the fund transfer button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_click_the_fund_transfer_button()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13000000,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "user fill the form",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_fill_the_form()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "click the transfer button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.click_the_transfer_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "the OTP page is displayed",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.the_OTP_page_is_displayed()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "user enter the OTP and Clicking validate VAT",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_enter_the_OTP_and_Clicking_validate_VAT()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3000000,
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "successful transfer page with transaction details is displayed",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.successful_transfer_page_with_transaction_details_is_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-10-11T18:18:37.432Z",
+        "line": 28,
+        "name": "verify the sign out",
+        "description": "",
+        "id": "verify-details-for-demo-bank;verify-the-sign-out",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d86.0.4240.75)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027ADMIN-PC\u0027, ip: \u0027192.168.0.104\u0027, os.name: \u0027Windows 8\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.2\u0027, java.version: \u00271.8.0_261\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.75, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\admin\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53214}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 9fe96fda3c4ad764ee81dbc2f7a90b97\n*** Element info: {Using\u003dlink text, value\u003dSign Out}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:380)\r\n\tat org.openqa.selenium.By$ByLinkText.findElement(By.java:220)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat com.maveric.demobank.stepdef.US2_TC_002.user_click_the_sign_out_button(US2_TC_002.java:179)\r\n\tat ✽.user click the sign out button(file:///C:/Users/admin/Documents/Maveric%20Systems/Materials/Selenium/GroupActivity2/DemoBank/src/test/java/com/maveric/demobank/features/AccountDetails.feature:29)\r\n",
+              "duration": 3029000000,
+              "status": "failed"
+            },
+            "line": 29,
+            "name": "user click the sign out button",
+            "match": {
+              "location": "com.maveric.demobank.stepdef.US2_TC_002.user_click_the_sign_out_button()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "verify details for demo bank",
+    "description": "",
+    "id": "verify-details-for-demo-bank",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/com/maveric/demobank/features/AccountDetails.feature",
+    "tags": []
+  }
+]
